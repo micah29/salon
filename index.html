@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEA Salon</title>
+    <link rel="stylesheet" href = "css/style.css">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@100;300;400;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Feather Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <!-- My Style -->
+    <link rel = "stylesheet" href="css/style.css">
+ 
+</head>
+<body>
+  <!-- Navbar start-->
+   <nav class = "navbar">
+    <a href="#" class ="navbar-logo">SEA Salon</a>
+    <div class="navbar-nav">
+        <a href="#home">Home</a>
+        <a href="#about">Services</a>
+        <!-- <a href="#menu">Menu</a> -->
+        <a href="#contact">Contact</a>
+    </div>
+
+    <div class="navbar-extra">
+    <a href="#" id="search"><i data-feather="search"></i></a>
+    <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
+    </div>
+   </nav>
+   <!-- Navbar End-->
+   <!-- Hero Section Start-->
+    <section class="hero" id="home">
+        <main class="content">
+            <h1>Beauty and Elegance <span>Redefined</span></h1>
+            <p>Enhance your style and unwind at our professional salon</p>
+            <a href="#" class="cta">Try Now!</a>
+        </main>
+    </section>
+   <!-- Hero section End-->
+    <!-- About Section start-->
+     <section id="about" class="about">
+        <h2>Our Services</h2>
+        <div class = "row">
+            <div class=""about-img">
+                <img src="img/nyalon.jpg" alt="Tentang Kami">
+            </div>
+            <div class ="content">
+                <h3>Experience top-quality services tailored just for you at our salon</h3>
+                <p> We offer haircuts and styling, menicure and pedicure, and also facial treatments </p>
+            </div>
+        </div>
+     </section>
+     <!-- About Section End-->
+    <!-- Contact section start-->
+     <section id="contact" class="contact">
+        <h2><span>Our Contact</span></h2>
+        <p> Thomas - 08123456789 </p>
+        <p> Sekar - 08164829372 </p>
+     </section>
+     <!-- contact secstion end-->
+<!-- Review Section Start -->
+    <section class="review" id="review">
+      <h2>Leave a Review</h2>
+      <form id="review-form">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <div class="star-rating">
+          <input type="radio" id="5-stars" name="rating" value="5" />
+          <label for="5-stars" class="star">&#9733;</label>
+          <input type="radio" id="4-stars" name="rating" value="4" />
+          <label for="4-stars" class="star">&#9733;</label>
+          <input type="radio" id="3-stars" name="rating" value="3" />
+          <label for="3-stars" class="star">&#9733;</label>
+          <input type="radio" id="2-stars" name="rating" value="2" />
+          <label for="2-stars" class="star">&#9733;</label>
+          <input type="radio" id="1-stars" name="rating" value="1" />
+          <label for="1-stars" class="star">&#9733;</label>
+        </div>
+        <textarea name="review" placeholder="Write your review here..." required></textarea>
+        <button type="button" onclick="submitReview()">Submit</button>
+      </form>
+    </section>
+    <!-- Review Section End -->
+
+    <!-- Reservation Section Start -->
+    <section class="reservation" id="reservation">
+      <h2>Make a Reservation</h2>
+      <form id="reservation-form">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="tel" name="phone" placeholder="Active Phone Number" required />
+        <select name="service" required>
+          <option value="" disabled selected>Select a Service</option>
+          <option value="Haircuts and Styling">Haircuts and Styling</option>
+          <option value="Manicure and Pedicure">Manicure and Pedicure</option>
+          <option value="Facial Treatments">Facial Treatments</option>
+        </select>
+        <input type="datetime-local" name="datetime" min="2023-01-01T09:00" max="2023-12-31T21:00" required />
+        <button type="button" onclick="submitReservation()">Submit</button>
+      </form>
+    </section>
+    <!-- Reservation Section End -->
+
+     
+  <!-- feather icons -->  
+   <script>
+      feather.replace();
+      
+      function submitReview() {
+        // Logic to handle review submission (e.g., send to backend)
+        alert('Review submitted!');
+        document.getElementById('review-form').reset();
+      }
+
+      function submitReservation() {
+        // Logic to handle reservation submission (e.g., send to backend)
+        alert('Reservation submitted!');
+        document.getElementById('reservation-form').reset();
+      }
+    </script>
+
+  <!-- My Javascript -->
+   <script src="js/script.js"></script>
+</body>
+</html> 
